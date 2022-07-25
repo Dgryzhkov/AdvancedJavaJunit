@@ -6,10 +6,10 @@ import java.lang.annotation.Target;
 /**
  * @author Dgryzhkov
  */
-@Target(ElementType.METHOD)
+
+@Target({ElementType.METHOD,ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface MethodInfo {
-    String author() default "Denis";
-    int dateOfCreation() default 2022;
-    String purpose();
+public @interface Author {
+    String name();
+    int dateOfCreation();
 }
